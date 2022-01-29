@@ -1,0 +1,93 @@
+/*guarda variáveis do CSS*/
+:root {
+  --vermelho: #e50914;
+  --preta: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*elementos base*/
+body {
+  background: var(--preta);
+  font-family: 'Arial', Times, serif;
+  color: #fff;
+}
+header .container {
+  display: flex;
+  flex-direction: row; /*propriedade configurada por default*/
+  align-items: center;
+  justify-content: space-between; /*cria um espaço entre a 1ª tag filha e a 2ª*/
+}
+header .logo {
+  margin-left: 5px;
+  color: var(--vermelho);
+  font-family: 'Arial Black';
+  font-size: 40px;
+}
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
+}
+header nav a:hover {
+  color: #fff;
+}
+
+/*filme principal*/
+.filme-principal {
+  font-size: 16px;
+  /*cria uma camada escura sobre a imagem*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url('../img/banner-friends.jpg');
+  height: 400px;
+  background-size: cover; /*pega a área de cobertura*/
+  display: flex;
+  flex-direction: column; /*joga os elementos para colunas*/
+  justify-content: center; /*segue a direção do flex-direction*/
+  align-items: flex-start; /*ps elementos someçam da esquerda*/
+}
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.filme-principal .titulo {
+  margin-top: 5%;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.botao {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 15px 30px; /*lida como espaço interno do elemento*/
+  margin-right: 15px; /*lida com o elemento por fora*/
+  font-size: 12px;
+  cursor: pointer; /*muda o ponteiro do mouse*/
+  transition: 0.3s ease all; /*cuida da transição entre uma animação e outra*/
+}
+.botao:hover {
+  background-color: white;
+  color: black;
+}
+.botao i {
+  margin-right: 8px;
+}
+.container {
+  margin-left: 20px;
+}
+.filme-principal .container {
+  width: 70%;
+}
+/*coniguração das imagens do carrossel*/
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.carrossel-filmes {
+  margin-top: 5px;
+}
